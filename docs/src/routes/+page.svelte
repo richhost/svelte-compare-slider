@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import { createComparison, type Orientation } from 'svelte-comparison';
+	import { createComparison, type Orientation } from 'svelte-compare-slider';
 
 	const orientation: Orientation = 'horizontal';
 

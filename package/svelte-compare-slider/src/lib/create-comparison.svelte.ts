@@ -4,10 +4,10 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
 }
 
-export default function createComparison(initProps: InitProps) {
+export default function createComparison(initProps?: InitProps) {
   const props = $state({
-    orientation: initProps.orientation ?? "horizontal",
-    position: initProps.position ?? 50,
+    orientation: initProps?.orientation ?? "horizontal",
+    position: initProps?.position ?? 50,
   });
 
   let position = $state(props.position);
