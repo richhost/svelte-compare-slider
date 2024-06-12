@@ -1,6 +1,6 @@
 {
   "name": "svelte-compare-slider",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Svelte lib to compare two components.",
   "license": "MIT",
   "author": "Abiee",
