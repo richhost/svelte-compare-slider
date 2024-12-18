@@ -1,3 +1,9 @@
 {
+  "name": "svelte-compare-slider",
+  "scripts": {
+    "build": "pnpm --filter './package/**' build",
+    "doc:dev": "pnpm --filter './docs' dev",
+    "doc:build": "pnpm build && pnpm --filter './docs' build"
+  },
   "packageManager": "pnpm@9.15.0"
 }
