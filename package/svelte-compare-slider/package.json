@@ -1,6 +1,17 @@
 {
   "name": "svelte-compare-slider",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "homepage": "https://github.com/richhost/svelte-compare-slider",
+  "author": {
+    "name": "Abiee"
+  },
+  "keywords": [
+    "svelte",
+    "svelte-compare-slider",
+    "svelte compare slider",
+    "compare slider"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",

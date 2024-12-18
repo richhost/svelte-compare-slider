@@ -19,9 +19,6 @@ importers:
       svelte:
         specifier: ^5.14.3
         version: 5.14.3
-      svelte-compare-slider:
-        specifier: workspace:*
-        version: link:../package/svelte-compare-slider
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -35,6 +32,9 @@ importers:
       simple-icons-astro:
         specifier: ^13.21.0
         version: 13.21.0(astro@5.0.9(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(typescript@5.7.2))
+      svelte-compare-slider:
+        specifier: workspace:*
+        version: link:../package/svelte-compare-slider
       tailwindcss:
         specifier: 4.0.0-beta.8
         version: 4.0.0-beta.8
