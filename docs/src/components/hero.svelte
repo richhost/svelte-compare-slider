@@ -42,8 +42,7 @@
 
     <div class="mt-10 text-gray-700 gap-5 flex flex-col items-center">
       <div class="max-w-64 w-full">
-        <label for="price-range" class="block font-bold mb-2">Price Range</label
-        >
+        <label for="price-range" class="block font-bold mb-2">Position</label>
         <input
           type="range"
           id="price-range"
