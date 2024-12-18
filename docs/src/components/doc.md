@@ -28,7 +28,7 @@ pnpm add -D svelte-compare-slider
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `direction` | `"horizontal" | `"vertical"` | The direction of the slider. |
+| `direction` | `horizontal` or `vertical` | `horizontal` | The direction of the slider. |
 | `position` | `number` | `50` | The position of the slider. |
 | `itemOne` | `Snippet` |  | First item to show. |
 | `itemTwo` | `Snippet` |  | Second item to show. |
