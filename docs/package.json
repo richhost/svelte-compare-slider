@@ -1,37 +1,24 @@
 {
-	"name": "docs",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.1.1",
-		"@sveltejs/kit": "^2.5.3",
-		"@sveltejs/vite-plugin-svelte": "^3.0.2",
-		"@types/eslint": "8.56.0",
-		"@typescript-eslint/eslint-plugin": "^6.21.0",
-		"@typescript-eslint/parser": "^6.21.0",
-		"autoprefixer": "^10.4.18",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "2.36.0-next.5",
-		"postcss": "^8.4.35",
-		"prettier": "^3.2.5",
-		"prettier-plugin-svelte": "^3.2.2",
-		"svelte": "5.0.0-next.57",
-		"svelte-check": "^3.6.6",
-		"svelte-compare-slider": "workspace:*",
-		"tailwindcss": "^3.4.1",
-		"tslib": "^2.6.2",
-		"typescript": "^5.4.2",
-		"vite": "^5.1.6"
-	},
-	"type": "module"
+  "name": "docs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^7.0.1",
+    "astro": "^5.0.9",
+    "svelte": "^5.14.3",
+    "svelte-compare-slider": "workspace:*",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/vite": "4.0.0-beta.8",
+    "simple-icons-astro": "^13.21.0",
+    "tailwindcss": "4.0.0-beta.8"
+  }
 }

@@ -1,10 +1,19 @@
-import * as CSS from "csstype";
+import type { Snippet } from "svelte";
+import type { SvelteHTMLElements } from "svelte/elements";
 
-export type Style = CSS.Properties;
+export type Direction = "horizontal" | "vertical";
 
-export type Orientation = "horizontal" | "vertical";
+export type CompareSliderProps = Omit<
+  SvelteHTMLElements["div"],
+  "style" | "onpointerdown" | "children" | "bind:this"
+> & {
+  /** @default "horizontal" */
+  direction?: Direction;
 
-export type InitProps = {
-  orientation?: Orientation;
+  /** @default 50 */
   position?: number;
+
+  itemOne?: Snippet;
+  itemTwo?: Snippet;
+  handle?: Snippet;
 };

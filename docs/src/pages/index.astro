@@ -1,0 +1,32 @@
+---
+import { Github } from "simple-icons-astro";
+import Background from "../components/background.astro";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero.svelte";
+import Doc from "../components/doc.md";
+---
+
+<Layout>
+  <Background />
+  <header class="flex items-center justify-end p-5 pr-10">
+    <a href="https://github.com/richhost/svelte-compare-slider">
+      <Github class="size-6" />
+    </a>
+  </header>
+
+  <Hero client:idle />
+  <div class="prose mx-auto mt-20 p-5">
+    <Doc />
+  </div>
+
+  <hr class="text-gray-200" />
+
+  <footer class="h-16 flex items-center justify-center">
+    Created with <span class="text-red-500 mx-2">❤</span>
+    by {"\u00A0"}<a
+      href="https://abiee.art"
+      class="text-indigo-500 font-bold"
+      target="_blank">Abiee</a
+    >
+  </footer>
+</Layout>

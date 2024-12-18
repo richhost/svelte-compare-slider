@@ -5,5 +5,4 @@
 
 ## Feature
 
-- Based on Svelte 5
-- Headless, No wrapper any components.
+- Based on Svelte 5.
