@@ -41,6 +41,7 @@
 
   const onkeydown = (event: KeyboardEvent) => {
     if (keyboardIncrement === undefined || disabled) return;
+    event.preventDefault();
     if (keyboardIncrement > 0) {
       const incrementKey = ["ArrowUp", "ArrowRight"];
       const decrementKey = ["ArrowDown", "ArrowLeft"];

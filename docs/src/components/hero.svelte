@@ -18,7 +18,7 @@
     <p class="md:text-lg text-gray-500 mb-10 mt-2">
       Compare two components side-by-side or top-to-toe.
     </p>
-    <CompareSlider bind:position {direction}>
+    <CompareSlider bind:position {direction} keyboardIncrement={5}>
       {#snippet itemOne()}
         <img
           draggable="false"
