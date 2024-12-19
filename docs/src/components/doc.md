@@ -33,3 +33,5 @@ pnpm add -D svelte-compare-slider
 | `itemOne` | `Snippet` |  | First item to show. |
 | `itemTwo` | `Snippet` |  | Second item to show. |
 | `handle` | `Snippet` |  | Custom handle component. You can also use the provided SliderHandle component. |
+| `keyboardIncrement` | `number` | `undefined` | Percentage amount to move when the slider handle is focused and keyboard arrow is pressed. |
+| `disabled` | `boolean` | `false` | Whether to disable slider movement. |
