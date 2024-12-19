@@ -1,3 +1,33 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+  import { CompareSlider, SliderHandle } from "$lib/index.js";
+</script>
+
+<div class="container">
+  <CompareSlider keyboardIncrement={5}>
+    {#snippet itemOne()}
+      <div class="one"></div>
+    {/snippet}
+    {#snippet itemTwo()}
+      <div class="two"></div>
+    {/snippet}
+    {#snippet handle()}
+      <SliderHandle />
+    {/snippet}
+  </CompareSlider>
+</div>
+
+<style>
+  .container {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  .one {
+    height: 200px;
+    background-color: antiquewhite;
+  }
+  .two {
+    height: 200px;
+    background-color: cadetblue;
+  }
+</style>

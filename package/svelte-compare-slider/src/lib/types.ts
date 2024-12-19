@@ -10,10 +10,24 @@ export type CompareSliderProps = Omit<
   /** @default "horizontal" */
   direction?: Direction;
 
-  /** @default 50 */
+  /**
+   * position percentage
+   * @default 50
+   */
   position?: number;
 
   itemOne?: Snippet;
   itemTwo?: Snippet;
   handle?: Snippet;
+
+  /**
+   * position percentage
+   */
+  keyboardIncrement?: number;
+
+  /**
+   * Whether to disable slider movement.
+   * @default false
+   */
+  disabled?: boolean;
 };

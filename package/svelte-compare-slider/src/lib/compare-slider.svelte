@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { clamp } from "./helper.js";
   import type { CompareSliderProps } from "./types.js";
 
   let {
@@ -7,15 +8,12 @@
     itemOne,
     itemTwo,
     handle,
+    keyboardIncrement,
+    disabled = false,
     ...props
   }: CompareSliderProps = $props();
 
-  function clamp(value: number, min: number, max: number) {
-    return Math.min(Math.max(value, min), max);
-  }
-
   let root: HTMLDivElement;
-
   let rect: DOMRect | null;
 
   const setPosition = (event: PointerEvent) => {
@@ -27,7 +25,7 @@
   };
 
   const onpointerdown = (event: PointerEvent) => {
-    if (!event.currentTarget) return;
+    if (!event.currentTarget || disabled) return;
     rect = root.getBoundingClientRect();
     setPosition(event);
     const target = event.target as HTMLElement;
@@ -39,6 +37,19 @@
       target.onpointerup = null;
       rect = null;
     };
+  };
+
+  const onkeydown = (event: KeyboardEvent) => {
+    if (keyboardIncrement === undefined || disabled) return;
+    if (keyboardIncrement > 0) {
+      const incrementKey = ["ArrowUp", "ArrowRight"];
+      const decrementKey = ["ArrowDown", "ArrowLeft"];
+      if (incrementKey.includes(event.key)) {
+        position = clamp(position + keyboardIncrement, 0, 100);
+      } else if (decrementKey.includes(event.key)) {
+        position = clamp(position - keyboardIncrement, 0, 100);
+      }
+    }
   };
 </script>
 
@@ -67,7 +78,16 @@
     {@render itemTwo?.()}
   </div>
 
-  <div style="display: contents;">
+  <div
+    tabindex="0"
+    role="slider"
+    aria-valuenow={position}
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-disabled={disabled}
+    {onkeydown}
+    style:cursor={disabled ? "not-allowed" : ""}
+  >
     {@render handle?.()}
   </div>
 </div>
